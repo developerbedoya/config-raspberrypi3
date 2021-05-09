@@ -54,3 +54,7 @@ No caso, compartilhar a pasta /home/pi/share e instalar cliente NFS para Windows
 
 [Fonte](https://pimylifeup.com/raspberry-pi-nfs/)
 
+## Instalar genius (calculadora)
+```
+sudo apt install genius
+```
