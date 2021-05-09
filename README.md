@@ -58,3 +58,8 @@ No caso, compartilhar a pasta /home/pi/share e instalar cliente NFS para Windows
 ```
 sudo apt install genius
 ```
+
+## Instalar suporte para mouse no console
+```
+sudo apt install gpm
+```
