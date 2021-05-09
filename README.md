@@ -47,7 +47,7 @@ Ler [aqui](https://pimylifeup.com/raspberry-pi-print-server/)
 
 ## Instalar servidor scanner
 
-[Fonte](https://www.cnx-software.com/2017/02/19/how-to-use-chip-board-as-a-linux-printer-scanner-server/
+[Fonte](https://www.cnx-software.com/2017/02/19/how-to-use-chip-board-as-a-linux-printer-scanner-server/)
 
 ## Instalar servidor NFS
 No caso, compartilhar a pasta /home/pi/share e instalar cliente NFS para Windows nos recursos do Windows.
