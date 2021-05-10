@@ -68,3 +68,15 @@ sudo apt install genius
 ```
 sudo apt install gpm
 ```
+
+## Instalar megacmd - para backups no mega.nz
+```
+sudo apt install libcrypto++ libpcrecpp0v5 libc-ares-dev zlib1g-dev libuv1 libssl-dev libsodium-dev readline-common sqlite3 curl autoconf libtool g++ libcrypto++-dev libz-dev libsqlite3-dev libssl-dev libcurl4-gnutls-dev libreadline-dev libpcre++-dev libsodium-dev libc-ares-dev libfreeimage-dev libavcodec-dev libavutil-dev libavformat-dev libswscale-dev libmediainfo-dev libzen-dev
+git clone https://github.com/meganz/MEGAcmd
+cd MEGAcmd && git submodule update --init --recursive
+sh autogen.sh
+./configure LDFLAGS="-latomic"
+make
+make install
+```
+Se der erro, conferir https://github.com/meganz/MEGAcmd/issues/451 para solução
