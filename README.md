@@ -80,3 +80,9 @@ make
 make install
 ```
 Se der erro, conferir https://github.com/meganz/MEGAcmd/issues/451 para solução
+
+Para fazer backup da pasta pessoal a cada 4 horas, executar `mega-cmd` e executar:
+```
+backup /home/pi /pirate --period="0 0 */4 * * *" --num-backups=10
+```
+Quando sair, executar `mega-cmd-server &` para manter a execução do backup
