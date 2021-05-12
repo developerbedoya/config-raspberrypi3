@@ -89,6 +89,21 @@ cd LCD-show/
 sudo ./LCD35-show 180
 ```
 
+Depois de reiniciar:
+```bash
+sudo apt-get -f install
+sudo apt install xinit xserver-xorg-video-fbturbo
+```
+
+Criar arquivo `/etc/X11/Xwrapper.config` e digitar:
+```
+allowed_users = anybody
+```
+
+Editar arquivo `/usr/share/X11/xorg.conf.d/99-fbturbo.conf` e trocar `fb0` por `fb1`
+
+
+
 ## Instalar suporte para mouse no console
 ```
 sudo apt install gpm
