@@ -16,3 +16,5 @@ xset -dpms
 xset s noblank
 exec feh -Y -x -q -D 5 -B black -F -Z -z -r ~/shared/photos
 ```
+
+Desabilitar o screen blanking no `raspi-config`
