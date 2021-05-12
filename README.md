@@ -81,6 +81,14 @@ sudo apt install mc
 sudo apt install genius
 ```
 
+## Instalar LCD35 (o 180 é opcional, é para virar o LCD 180º
+```bash
+git clone https://github.com/goodtft/LCD-show
+chmod -R 755 LCD-show
+cd LCD-show/
+sudo ./LCD35-show 180
+```
+
 ## Instalar suporte para mouse no console
 ```
 sudo apt install gpm
