@@ -1,0 +1,13 @@
+[Unit]
+Description=mega-cmd-server background task
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/local/bin/mega-cmd-server
+WorkingDirectory=/home/pi
+User=pi
+
+[Install]
+WantedBy=multi-user.target

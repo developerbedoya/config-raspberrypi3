@@ -39,7 +39,7 @@ Salvar com `:w!` para forçar salvar arquivo somente leitura.
 
 ## Instalar pacotes base
 
-`sudo apt install git w3m tmux vim-nox`
+`sudo apt install git w3m w3m-img tmux vim-nox`
 
 ## Instalar servidor impressão e scanner
 
@@ -115,11 +115,21 @@ sudo apt install libcrypto++ libpcrecpp0v5 libc-ares-dev zlib1g-dev libuv1 libss
 git clone https://github.com/meganz/MEGAcmd
 cd MEGAcmd && git submodule update --init --recursive
 sh autogen.sh
-./configure LDFLAGS="-latomic"
+LDFLAGS="-latomic" ./configure
 make
-make install
+sudo make install
+sudo ldconfig
 ```
 Se der erro, conferir https://github.com/meganz/MEGAcmd/issues/451 para solução
+
+### Criar e habilitar serviço mega-cmd-server
+Primeiro tem que logar no mega-cmd pelo menos uma vez para armazenamento de credenciais.
+```bash
+sudo cp mega-cmd-server.service /etc/systemd/system/
+sudo chown root:root /etc/systemd/system/mega-cmd-server.service
+sudo systemctl enable mega-cmd-server
+sudo systemctl start mega-cmd-server
+```
 
 Para fazer backup da pasta pessoal a cada 4 horas, executar `mega-cmd` e executar:
 ```
