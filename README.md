@@ -45,6 +45,16 @@ Salvar com `:w!` para forçar salvar arquivo somente leitura.
 
 Ler [aqui](https://www.cnx-software.com/2017/02/19/how-to-use-chip-board-as-a-linux-printer-scanner-server/)
 
+### Resolver permissão scanner:
+* Pegar arquivo `60-hp-deskjet-f4180.rules` do repositório e executar:
+```bash
+sudo cp 60-hp-deskjet-f4180.rules /lib/udev/rules.d/
+sudo chown root:root /lib/udev/rules.d/60-hp-deskjet-f4180.rules
+sudo chmod 644 /lib/udev/rules.d/60-hp-deskjet-f4180.rules
+sudo usermod -aG scanner pi
+```
+* Reiniciar a máquina (e profit (?))
+
 ## Instalar servidor NFS
 No caso, compartilhar a pasta /home/pi/share e instalar cliente NFS para Windows nos recursos do Windows.
 
