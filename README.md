@@ -53,7 +53,18 @@ sudo chown root:root /lib/udev/rules.d/60-hp-deskjet-f4180.rules
 sudo chmod 644 /lib/udev/rules.d/60-hp-deskjet-f4180.rules
 sudo usermod -aG scanner pi
 ```
-* Reiniciar a máquina (e profit (?))
+* Reiniciar a máquina e configurar sane para acesso remoto
+Os arquivos saned.socket e saned@.service estão no repositório
+
+```bash
+sudo cp saned.socket /etc/systemd/system/
+sudo chown root:root /etc/systemd/system/saned.socket
+sudo chmod 644 /etc/systemd/system/saned.socket
+
+sudo cp saned@.service /etc/systemd/system/
+sudo chown root:root /etc/systemd/system/saned@.service
+sudo chmod 644 /etc/systemd/system/saned@.service
+``` 
 
 ## Instalar servidor NFS
 No caso, compartilhar a pasta /home/pi/share e instalar cliente NFS para Windows nos recursos do Windows.
