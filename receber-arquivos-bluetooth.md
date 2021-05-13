@@ -5,13 +5,14 @@ core_freq=250
 dtoverlay=miniuart-bt
 ```
 
+Depois, corrigir probleminha no serviço bluetooth, editando o arquivo /etc/systemd/system/dbus-org.bluez.service e adicionando o parâmetro -C na linha `ExecStart`. 
+
 Depois adicionar o usuário pi no grupo bluetooth e reiniciar:
 ```bash
 sudo usermod -aG bluetooth pi
 sudo reboot
 ```
-
-Depois conectar o Windows no raspberry pi, executar bluetoothctl
+Depois, executar bluetoothctl e executar os comandos:
 ```
 discoverable on
 agent on
